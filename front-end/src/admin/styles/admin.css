@@ -1,0 +1,49 @@
+.page-layout section {
+    position: relative;
+    margin: 1.5rem 0;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+section h4 {
+    padding: 0.5rem;
+    color: #5d5d5d;
+}
+.page-layout .dashboard-grid {
+    display: grid;
+    align-content: start;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    background-color: transparent;
+}
+
+.dashboard-grid > .row {
+    background-color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-grid > .row i {
+    color: var(--color);
+    font-size: 3.8rem;
+}
+.dashboard-grid > .row h5 {
+    color: #4b4b4b;
+    font-size: 23px;
+    font-weight: 700;
+}
+.dashboard-grid > .row span {
+    color: #0075bc;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/*--> RESPONSIVE FOR UI <--*/
+@media (max-width: 768px) {
+    .page-layout .dashboard-grid {
+        grid-template-columns: auto;
+        padding: 0.5rem;
+    }
+}

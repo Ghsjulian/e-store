@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 90%;
+    font-family: "Sans-Serif";
+    scroll-behavior: smooth;
+}
+:root {
+    --bg: #d9e1e0;
+    --white: #ffffff;
+    --color: #303d3c;
+    --active: #007509;
+}
+body {
+    background: var(--bg);
+}
+a {
+    outline: none;
+    text-decoration: none;
+}
+input,
+button {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+body i {
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--color);
+}
+
+header {
+    width: 80%;
+    position: fixed;
+    left: 20%;
+    top: 0;
+    right: 0;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 1rem;
+    z-index: 9000;
+    border-bottom: .1px solid #c8c8c8;
+}
+header .logo {
+    color: #0098a1;
+    font-weight: 800;
+    font-size: 25px;
+}
+header .header-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.7rem;
+}
+header .header-links a {
+    text-decoration: none;
+    color: var(--color);
+    font-weight: 500;
+}
+.header-links .search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.6px solid var(--color);
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+}
+header-links .search input {
+    outline: none;
+    border: none;
+}
+header .m-btn {
+    display: none;
+}
+/*--> ASIDE STYLING HERE <--*/
+aside {
+    position: fixed;
+    width: 19.5%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: var(--white);
+    padding: 0.5rem;
+    overflow: auto;
+    z-index: 9000;
+}
+.desk h3 {
+    text-align: left;
+    margin: 0.5rem 0;
+    color: var(--color);
+}
+
+.desk .side-links {
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    text-align: justify;
+    margin: 0.3rem 0;
+}
+.desk .side-links a {
+    position: relative;
+    text-decoration: none;
+    color: var(--color);
+    font-weight: 500;
+    margin: 0.6rem 0;
+    display: flex;
+    align-items: center;
+    padding: 0.3rem 0;
+    border-radius: 5px;
+}
+.desk .side-links a .noti-budget {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #007db0;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.desk .side-links a .order-budget {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #039600;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.desk .side-links a .cart-budget {
+    position: absolute;
+    right: 20px;
+    bottom: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ec1200;
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+.desk .side-links a i {
+    color: #040404;
+    font-weight: 700;
+}
+.desk .side-links a span {
+    margin: 0 0.6rem;
+    color: var(--color);
+    font-weight: 700;
+}
+.overly,
+.desk .search {
+    display: none;
+}
+
+.page-layout {
+    position: relative;
+    width: 80%;
+    height: 100vh;
+    left: 20%;
+    right: 0;
+    top: 0;
+    background: transparent;
+}
+
+/*--> RESPONSIVE FOR UI <--*/
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+    header .header-links {
+        display: none;
+    }
+    .desk {
+        left: -20%;
+    }
+    header .m-btn {
+        display: block;
+        font-size: 18px;
+    }
+    header .m-btn i {
+        font-size: 28px;
+    }
+    .m-menu {
+        left: 0;
+        width: 60%;
+        animation: sidebar 0.3s linear;
+    }
+    .m-menu .search {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 0.6px solid var(--color);
+        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+        margin: 0.7rem 0;
+    }
+    .m-menu .search input {
+        outline: none;
+        border: none;
+        width: 100%;
+        display: block;
+    }
+    .overly {
+        display: block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        left: 60%;
+        width: 40%;
+        height: 100vh;
+        background: rgba(58, 68, 67, 0.265);
+        transition: 0.5s ease-in;
+        z-index: 90000;
+    }
+    .page-layout {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+}
+@keyframes sidebar {
+    from {
+        left: -65%;
+    }
+    to {
+        left: 0;
+    }
+}
