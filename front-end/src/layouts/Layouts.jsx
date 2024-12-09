@@ -1,5 +1,6 @@
-import React from "react";
+import { Outlet, Navigate, useLocation } from "react-router-dom";
 import "../styles/layouts.css";
+import "../styles/login.css";
 // Imported The Bootsrtrap Icons
 import "../styles/vendor/bootstrap-icons/bootstrap-icons.css";
 import "../styles/vendor/boxicons/css/boxicons.min.css";
@@ -10,6 +11,9 @@ const Layouts = () => {
     return (
         <>
             <Header/>
+             <main className="page-layout">
+            <Outlet />
+            </main>
         </>
     );
 };

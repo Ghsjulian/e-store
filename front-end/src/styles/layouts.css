@@ -23,8 +23,8 @@ a {
 }
 input,
 button {
-    outline: none;
     border: none;
+    outline: none;
     background: transparent;
 }
 body i {

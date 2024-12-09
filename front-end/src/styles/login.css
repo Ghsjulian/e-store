@@ -1,0 +1,159 @@
+:root {
+    --success: #049000;
+    --error: #d51600;
+    --suceess-bg: rgba(13, 162, 0, 0.185);
+    --error-bg: rgba(162, 25, 0, 0.185);
+}
+
+.full-page {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+.login {
+    width: 85%;
+    max-width: 350px;
+    padding: 1rem;
+    margin: 0.5rem auto;
+    background: var(--white);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        2px 3px 35px rgba(157, 157, 157, 0.874),
+        -2px -3px 35px rgba(157, 157, 157, 0.874);
+    transition: 0.5s ease-in;
+}
+.error-animation {
+    background: rgba(244, 54, 54, 0.224);
+    animation: 0.7s error linear infinite;
+}
+.login h2 {
+    color: var(--login-h3);
+    font-weight: 500;
+    text-align: center;
+    margin: 0.3rem auto;
+}
+.login img {
+    width: 140px;
+    height: 110px;
+    object-fit: contain;
+    margin: 0 auto;
+    margin-top: 0.6rem;
+}
+.login #message {
+    margin: 0.2rem auto;
+    font-size: 15px;
+    font-family: Sans-Serif;
+    font-weight: 500;
+    width: 215px;
+    display: block;
+}
+.login .error {
+    color: var(--error);
+    padding: 0.5rem 1rem;
+    border: 0.1px solid var(--error);
+    background: var(--error-bg);
+    border-radius: 5px;
+}
+.login .success {
+    color: var(--success);
+    padding: 0.5rem 1rem;
+    border: 0.1px solid var(--success);
+    background: var(--suceess-bg);
+    border-radius: 5px;
+}
+.login input {
+    width: 215px;
+    outline: none;
+    border: 1.5px solid var(--color);
+    color: var(--color);
+    font-weight: 500;
+    margin: 0.7rem auto;
+    padding: 0.7rem 1rem;
+    border-radius: 5px;
+    transition: 0.2s ease-in;
+}
+.login input:focus {
+    border: 1.5px solid var(--success);
+}
+.login #login-btn {
+    width: 215px;
+    outline: none;
+    border: none;
+    padding: 0.6rem 1rem;
+    margin: 0.3rem auto;
+    background: var(--color);
+    color: #fff;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login #login-btn:hover {
+    background: var(--success);
+    color: #fff;
+    outline: none;
+}
+.login #login-btn .load {
+    width: 22px;
+    height: 22px;
+    border-left: 3px solid currentColor;
+    border-bottom: 3px solid currentColor;
+    border-right: 3px solid currentColor;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    margin: 0 0.3rem;
+    animation: 0.5s loading linear infinite;
+}
+.login p {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: var(--color);
+    font-weight: 600;
+    margin: 0.3rem 0;
+}
+.login p a {
+    color: var(--success);
+    font-weight: 900;
+    margin-left: 0.7rem;
+    text-decoration: none;
+}
+/* Create Loading Animation Using CSS Keyframes */
+@keyframes loading {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+/* Error Animation */
+@keyframes error {
+    from {
+        background: rgba(212, 8, 8, 0.117);
+    }
+    from {
+        background: rgba(244, 54, 54, 0.262);
+    }
+}
+/* Zoom In Animation */
+@keyframes zoom {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

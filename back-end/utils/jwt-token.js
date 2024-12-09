@@ -3,7 +3,6 @@ const dotenv = require("dotenv").config("../../.env");
 const secretKey = process.env.SECRET_KEY;
 const expiresIn = process.env.EXPIRES_IN;
 
-
 const encodeJWT = async payload => {
     return jwt.sign(payload, secretKey, { expiresIn });
 };
@@ -15,9 +14,9 @@ const decodeJWT = async token => {
     }
 };
 const setCookie = async (res, value) => {
-    res.cookie("store-user", value, {
+    res.cookie("e-store", value, {
         maxAge: 30 * 24 * 60 * 60 * 1000,
-        httponly: true,
+        httponly: false,
         sameSite: "strict",
         secure: process.env.NODE_ENV !== "development"
     });

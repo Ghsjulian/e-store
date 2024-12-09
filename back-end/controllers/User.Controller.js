@@ -222,13 +222,14 @@ class USerController {
                                 };
                                 // Setting Cookies In Response
                                 // functions.setCookie(res, token);
+                                await jwt.setCookie(res, token);
                                 return res.status(200).json({
                                     code: 200,
                                     user,
                                     status: "success",
                                     error: false,
                                     success: true,
-                                    message: "User Logged In Successfully"
+                                    message: "Login Successfully"
                                 });
                             } else {
                                 throw new Error("Login Faild Please Try Again");
